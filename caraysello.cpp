@@ -13,21 +13,17 @@ int main(){
     srand(time(NULL));
     for(c = 1;c <= 2;c++)
         num = 1 + rand() % (3 - 1);
-    if(num==1){
+    if(sh1!=1 and sh1!=2){
+        cout<<"Opción incorrecta, vuelve a intentarlo"<<endl;
+    }else if(num==1){
         cout<<"La computadora elige cara"<<endl;
+        cout<<"Perdiste"<<endl;
     }else if(num==2){
         cout<<"La computadora elige sello"<<endl;
-    }
-    int punto=0;
-    int puntoh=0;
-    if((num==1 and sh1==2) || (num==2 and sh1==1)){
-        cout<<"La computadora gana"<<endl;
-        punto++;
-    }else if((sh1==1 and num==3) || (sh1==3 and num==2) || (sh1==2 and num==1)){
-        cout<<"El humano gana"<<endl;
-        puntoh++;
+        cout<<"Perdiste"<<endl;
     }else{
         cout<<"Empate"<<endl;
     }
+    return 0;
 
 }
